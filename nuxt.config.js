@@ -91,7 +91,7 @@ export default {
         /**
          * The client endpoint url
          */
-        endpoint: 'http://192.168.1.22:1337/graphql',
+        endpoint: process.env.STRAPI_API || 'http://192.168.1.22:1337/graphql',
         /**
          * Per-client options overrides
          * See: https://github.com/prisma-labs/graphql-request#passing-more-options-to-fetch
@@ -114,7 +114,7 @@ export default {
      * Optional
      * default: true (this includes cross-fetch/polyfill before creating the graphql client)
      */
-    useFetchPolyfill: false,
+    useFetchPolyfill: true,
 
     /**
      * Optional
@@ -126,8 +126,8 @@ export default {
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.scss',
     exposeConfig: true,
+    jit: true,
   },
-  jit: true,
 
   pwa: {
     icon: false,
