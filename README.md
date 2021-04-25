@@ -1,4 +1,4 @@
-# nuxt-frontend
+# Recipes book
 
 ## Build Setup
 
