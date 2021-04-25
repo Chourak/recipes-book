@@ -2,7 +2,7 @@
   <div>
     <RecettesCardAjouterRecette v-if="editable" />
     <div v-for="recette in recettes" :key="recette.id" class="recette">
-      <Recette :recette="recette" />
+      <Recette :recette="recette" :editable="editable" />
     </div>
   </div>
 </template>
